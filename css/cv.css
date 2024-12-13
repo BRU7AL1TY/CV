@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('ttf'),
+  url('../fonts/Roboto-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../fonts/Roboto-Light.ttf') format('ttf'),
+  url('../fonts/Roboto-Light.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Engravers\' Old English';
+  src: url('../fonts/EngraversOldEnglishBT-Regular.woff2') format('woff2'),
+  url('../fonts/EngraversOldEnglishBT-Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.header {
+  background-color: #000000;
+  padding: 0.5vh;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header a {
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  gap: 15px;
+  position: sticky;
+}
+
+h1 {
+  font-family: 'Engravers\' Old English';
+  font-size: 2.5vh;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.picture {
+  margin: 10vh auto 5vh auto;
+  display: block;
+  width: 20%;
+}
+
+.section-top {
+  margin: 10vh 25vh 10vh 25vh;
+}
+
+.section {
+  margin: 5vh 25vh 10vh 25vh;
+}
+
+h2 {
+  font-size: 3vw;
+  font-family: 'Engravers\' Old English';
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  height: 10vh;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 5em;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  gap: 15px;
+}
+
+.social-text {
+  font-family: 'Engravers\' Old English';
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}

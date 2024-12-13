@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('ttf'),
+  url('../fonts/Roboto-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../fonts/Roboto-Light.ttf') format('ttf'),
+  url('../fonts/Roboto-Light.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Engravers\' Old English';
+  src: url('../fonts/EngraversOldEnglishBT-Regular.woff2') format('woff2'),
+  url('../fonts/EngraversOldEnglishBT-Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  background: linear-gradient(rgba(255,255,255,1) 0%, rgba(51,51,51,1) 50%, rgba(0,0,0,1) 100%);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.section {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: unset;
+}
+
+/* --------------- start sidebar --------------- */
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 10px 0;
+  background-color: #292C33;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar .dot:hover {
+  background-color: #ff6347;
+}
+
+.sidebar .dot.active {
+  background-color: #ff6347;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.sidebar .dot:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
+/* --------------- end sidebar --------------- */
+/* --------------- start #home --------------- */
+
+#home {
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Engravers\' Old English';
+  font-size: 20vh;
+  font-weight: 500;
+}
+
+.description p {
+  font-size: 2em;
+  color: #555;
+}
+
+/* --------------- end #home --------------- */
+/* --------------- start #aboutme --------------- */
+
+#aboutme {
+  position: relative;
+  color: #292C33;
+}
+
+h2 {
+  font-family: 'Engravers\' Old English';
+  font-size: 10vh;
+  font-weight: 500;
+  font-style: normal;
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
+  margin: 0;
+  padding: 10px;
+}
+
+.aboutme {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10vh;
+}
+
+.aboutme a {
+  text-decoration: none;
+  font-family: 'Engravers\' Old English';
+  font-size: 3em;
+  color: inherit;
+  color: darkgoldenrod;
+}
+
+.aboutme a:hover {
+  color: #dc143c; /* Zmieniamy kolor na pomarańczowy lub dowolny inny */
+}
+
+.aboutme p {
+  font-family: 'Roboto Light';
+  font-size: 2em;
+}
+
+/* --------------- end #aboutme --------------- */
+/* --------------- start #projects --------------- */
+
+#projects {
+  position: relative;
+  color: #E3DDD5;
+}
+
+.projects {
+  position: absolute;
+  right: 0;  /* Ustawienie na prawej krawędzi sekcji */
+  top: 50%;  /* Wyrównanie w pionie (opcjonalnie - zależnie od potrzeb) */
+  transform: translateY(-50%);  /* Umożliwia wyśrodkowanie tekstu w pionie względem sekcji */
+  padding: 10vh;
+}
+
+.projects p {
+  font-size: 2.5em;
+  color: #555;
+  margin: 5vh;
+}
+
+/* --------------- end #projects --------------- */
+/* --------------- start #contact --------------- */
+
+#contact {
+  text-align: center;
+  position: relative;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: 'Engravers\' Old English';
+  font-size: 10vh;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 10px;
+}
+
+p.email {
+  color: #ffffff;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-links a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  gap: 15px;
+}
+
+.social-text {
+  font-family: 'Engravers\' Old English';
+  font-size: 40px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* --------------- end #contact --------------- */
+
+.responsive-image {
+  display: block;
+  width: 70vw;
+  height: 70vh;
+  object-fit: contain;
+}
